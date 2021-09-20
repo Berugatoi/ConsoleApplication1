@@ -1,11 +1,24 @@
-﻿// ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
 
-#include <iostream>
+using namespace std;
+float S, p, n, m;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Russian");
+
+    cout << "Введите S:" << endl;
+    cin >> S;
+
+    cout << "Введите p:" << endl;
+    cin >> p;
+
+    cout << "Введите n:" << endl;
+    cin >> n;
+
+    float r = p / 100;
+    m = ((S * r * pow((1 + r), n)) / (12 * (pow((1 + r), n) - 1)));
+    cout << "m равно: " << m << endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
